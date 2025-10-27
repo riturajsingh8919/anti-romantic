@@ -3,7 +3,7 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import { WishlistProvider } from "@/contexts/WishlistContext";
 import { CartProvider } from "@/contexts/CartContext";
 import GoToTopButton from "@/components/ui/GoToTopButton";
-// import RouteTransition from "@/components/RouteTransition";
+import RouteTransition from "@/components/RouteTransition";
 import "./globals.css";
 
 export const metadata = {
@@ -18,9 +18,7 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <WishlistProvider>
             <CartProvider>
-              {/* <RouteTransition> */}
-              {children}
-              {/* </RouteTransition> */}
+              <RouteTransition>{children}</RouteTransition>
             </CartProvider>
           </WishlistProvider>
         </AuthProvider>
