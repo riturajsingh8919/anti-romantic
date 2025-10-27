@@ -271,11 +271,11 @@ const SingleProductPage = ({ productSlug }) => {
             <div className="relative">
               {product.images && product.images.length > 0 ? (
                 product.images.map((image, index) => (
-                  <div key={index} className="w-full">
+                  <div key={index} className="w-full md:h-[100dvh]">
                     <img
                       src={image.url || image}
                       alt={image.alt || `${product.name} ${index + 1}`}
-                      className="w-full h-auto object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 ))
