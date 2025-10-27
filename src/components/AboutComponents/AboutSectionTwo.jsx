@@ -105,7 +105,7 @@ function AboutSectionTwo() {
 
   return (
     <section className="relative bg-[url('/about/about-sec-2-bg.jpg')] bg-no-repeat bg-cover overflow-x-hidden">
-      <div className="relative flex flex-col md:flex-row gap-5 md:gap-0">
+      <div className="relative flex flex-col md:flex-row gap-5 md:gap-0 items-center">
         {/* Left side - Images with stagger */}
         <motion.div
           className="w-full md:w-[45%] flex flex-col gap-4 self-start"
@@ -129,7 +129,7 @@ function AboutSectionTwo() {
               alt="About Section Image"
               width={500}
               height={300}
-              className="w-full h-full object-cover"
+              className="w-full h-[55vh] object-cover"
             />
           </motion.div>
         </motion.div>
@@ -142,7 +142,7 @@ function AboutSectionTwo() {
           viewport={{ once: true, amount: 0.2 }}
           variants={textContainerVariants}
         >
-          <div className="flex flex-col gap-8 px-4 md:px-0 md:max-w-[60%] mx-auto py-16 md:pt-20 md:pb-0">
+          <div className="flex flex-col gap-8 px-4 md:px-0 md:max-w-[60%] mx-auto py-16 md:py-0">
             {/* Icon - scale animation */}
             <motion.div variants={iconVariants}>
               <Image

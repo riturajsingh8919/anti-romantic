@@ -99,12 +99,12 @@ function ContactPopup({ children }) {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
 
-      <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto bg-white/85 border-[#827C71] border-2">
+      <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto bg-[#D0C9BE]/85 border-[#827C71] border-2">
         <DialogHeader className="relative">
           <DialogTitle className="text-2xl font-bold text-[#28251F] text-center mb-2">
             Get In Touch
           </DialogTitle>
-          <p className="text-text text-center text-base">
+          <p className="text-center text-lg text-[#28251F]">
             We'd love to hear from you. Send us a message and we'll respond as
             soon as possible.
           </p>
