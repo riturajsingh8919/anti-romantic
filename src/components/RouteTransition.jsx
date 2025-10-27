@@ -5,13 +5,18 @@ import { usePathname } from "next/navigation";
 import Loader from "@/components/Loader";
 
 export default function RouteTransition({ children }) {
-  const [loading, setLoading] = useState(true); // Start with loader visible
   const pathname = usePathname();
+  const isAdminRoute = pathname.startsWith("/admin");
+  const [loading, setLoading] = useState(!isAdminRoute); // Don't show loader for admin routes
 
   useEffect(() => {
-    // Show loader on route change
-    setLoading(true);
-  }, [pathname]);
+    // Show loader on route change only if not an admin route
+    if (!isAdminRoute) {
+      setLoading(true);
+    } else {
+      setLoading(false);
+    }
+  }, [pathname, isAdminRoute]);
 
   const handleLoadComplete = () => {
     setLoading(false);

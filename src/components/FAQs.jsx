@@ -18,7 +18,7 @@ function AccordionItem({ title, description, isActive, onClick, index }) {
     >
       <motion.button
         className={`flex w-full justify-between items-center py-6 text-left transition-colors cursor-pointer ${
-          isActive ? "font-bold text-[#817C73]" : "text-[#656056]"
+          isActive ? "font-medium text-[#817C73]" : "text-[#656056]"
         }`}
         onClick={onClick}
         whileHover={{ x: 5 }}

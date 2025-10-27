@@ -160,7 +160,7 @@ function Footer() {
                       shop
                     </Link>
                   </motion.li>
-                  <motion.li variants={navItemVariants}>
+                  {/* <motion.li variants={navItemVariants}>
                     <Link
                       className={`text-base lg:text-xl ${
                         isActivePage("/collection")
@@ -171,7 +171,7 @@ function Footer() {
                     >
                       collection{" "}
                     </Link>
-                  </motion.li>
+                  </motion.li> */}
                   <motion.li variants={navItemVariants}>
                     <ContactPopup>
                       <button

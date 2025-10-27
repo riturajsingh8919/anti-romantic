@@ -15,16 +15,16 @@ function Loader({ onLoadComplete }) {
           clearInterval(fillInterval);
           return 0;
         }
-        return prev - 2; // Fast fill
+        return prev - 1.25; // Slower than original (2) but completes in 2 seconds
       });
-    }, 20);
+    }, 25); // Balanced timing for smooth but slower fill
 
     const timer = setTimeout(() => {
       setIsLoaded(true);
       if (onLoadComplete) {
         setTimeout(onLoadComplete, 300);
       }
-    }, 2000);
+    }, 2000); // Back to original 2 seconds
 
     return () => {
       clearInterval(fillInterval);
